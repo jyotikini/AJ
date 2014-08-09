@@ -1,0 +1,287 @@
+@CHARSET "ISO-8859-1";
+
+.text-comtainer {
+	border: 1px solid gray;
+	width: 95%;
+	height: 85%;
+	margin: 55px auto;
+	
+}
+
+#main-container {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	min-width: 1024px;
+	height: 900px;
+	background: #ffffff;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background: transparent;
+	width: 100%;
+	min-width: 1024px;
+}
+
+.main-header {
+	width: 100%;
+	min-width: 1024px;
+	height: 100px;
+	padding: 0;
+	background-color: white;
+	margin: 0;
+}
+
+#image-container img {
+	height: 90px;
+	padding: 0;
+	margin-top: 5px;
+	margin-left: 5px;
+	
+}
+
+.nav-menu-template .menu,.nav-menu {
+	color: white !important;
+}
+
+.menu-items-slider {
+	width: 98%;
+	min-width: 990px;
+}
+
+#menu-admin {
+	float: right;
+	margin-top: -20px;
+	margin-right: 20px;
+}
+#menu-admin:hover {
+	text-decoration:underline;
+	cursor: pointer;
+}
+#menu-admin:active{
+	color: maroon;
+}
+#text1 {
+	color: white !important;
+}
+
+#nav-menu-container {
+	width: 100%;
+	min-width: 1024px;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+}
+
+.menu {
+	position: relative;
+	padding: 0px 5px 0px 5px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.menu:hover {
+	background-color: gray;
+	padding: 5px 5px 5px 5px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#menu-admin {
+	float: right;
+	
+}
+
+#nav-menu-container li {
+	list-style-type: none;
+	display: inline;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: white;
+}
+
+#nav-menu-container div {
+	margin-left: 20px;
+	position: absolute;
+	margin-top: 8px;
+}
+
+#carousel-n-overview {
+	height: 400px;
+	margin-top: 400px;
+	margin: auto;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+#carousel-section {
+	width: 70%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.7;
+}
+
+#overview-section {
+	width: 30%;
+	height: 100%;
+	background-color: yellow;
+}
+
+.reports-n-achievements-n-trainings {
+	width: 100%;
+	min-width: 1024px;
+}
+
+.reports-n-achievements-n-trainings-individual-box-verti {
+	box-sizing: border-box;
+	width: 32%;
+	margin: 1% 0% 0% 1%;
+	height: 500px;
+	float: left;
+	z-index: 0;
+	background-color: #dedede;
+}
+
+#reports-section-verti {
+	
+	 
+}
+
+#achievements-section-verti {
+	
+}
+
+#trainings-section-verti {
+	
+}
+
+.reports-n-achievements-n-trainings-toggle-button {
+	margin-right: 8px;
+	border:2px ridge black;
+	float:right;
+	margin-top: 13px;	
+	cursor: pointer;
+	/*border:0.5px ridge gray;*/		
+}
+
+.reports-n-achievements-n-trainings-toggle-button:hover {
+	box-shadow: 1px 1px 5px 2px gray;
+}
+
+.reports-n-achievements-n-trainings-toggle-button:active {
+	opacity:0.8;
+	border:2px ridge transparent;
+	box-shadow:none;
+}
+
+#reports-section-plus, #achievements-section-plus, #trainings-section-plus {
+	width:20px;
+	height:20px;
+	margin-right:10px;
+	background-image: url('../default/images/expand.jpg');
+	
+}
+
+#reports-section-minus, #achievements-section-minus, #trainings-section-minus {
+	
+	width:20px;
+	height:20px;
+	margin-right:10px;
+	background-image: url('../default/images/collapse.jpg');
+	display: none;
+}
+#reports-section-button, #achievements-section-button, #trainings-section-button{
+	width:20px;
+	height:20px;
+	margin-right:5px;
+	background-image: url('../default/images/pencil.jpg');
+}
+
+.reports-n-achievements-n-trainings-individual-box-hori {
+	box-sizing: border-box;
+	width: 98%;
+	min-width: 1004px;
+	position: absolute;
+	margin: 65px 0 0 13px;
+	height: 450px;
+	display: none;
+}
+
+#reports-section-hori {
+	background-color: red;
+}
+
+#achievements-section-hori {
+	background-color: green;
+}
+
+#trainings-section-hori {
+	background-color: blue;
+}
+/*Editor config below*/
+.ui-dialog-content {
+	background-color: #333333;
+}
+
+.ui-editor-group,.ui-editor-toolbar {
+	background-image: none !important; //
+	margin-left: 100px;
+}
+
+.ui-dialog-titlebar {
+	background-image: none !important;
+	background-color: white;
+}
+
+.ui-dialog-titlebar:hover {
+	background-color: #dedede !important; //
+	border: 1px solid black !important;
+}
+
+.ui-dialog {
+	border: 1px solid #333333;
+}
+
+.ui-editor-button:HOVER {
+	background-color: yellow !important;
+}
+
+
+
+
+/*Login dialog config below */
+.ui-dialog-content {
+	background-color: #333333;
+}
+
+.ui-editor-group,.ui-editor-toolbar {
+	background-image: none !important; //
+	margin-left: 100px;
+}
+
+.ui-dialog-titlebar {
+	background-image: none !important;
+	background-color: white;
+}
+
+.ui-dialog-titlebar:hover {
+	background-color: #dedede !important; //
+	border: 1px solid black !important;
+}
+
+.ui-dialog {
+	border: 1px solid #333333;
+}
+
+.ui-editor-button:HOVER {
+	background-color: yellow !important;
+}
