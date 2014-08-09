@@ -1,0 +1,9 @@
+@CHARSET "ISO-8859-1";
+
+#login-form{
+	border:1px solid black;
+	width:inherit;
+	-moz-border-radius:10x;
+	-moz-padding:10px;
+	-moz-background-color:#dedede;
+}
