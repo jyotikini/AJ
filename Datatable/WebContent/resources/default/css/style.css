@@ -1,0 +1,35 @@
+@CHARSET "ISO-8859-1";
+
+.employeeTable{   
+   border-collapse:collapse;
+   
+}
+
+.employeeTableHeader{
+   text-align:center;
+   color:white;
+   background:black; 
+   padding:2px;
+   border:1px solid #5C5C3D;
+   
+}
+.employeeTableOddRow{
+   text-align:center;
+   background:#66FF33;
+   height:50px;	
+   border:1px solid #5C5C3D;
+}
+
+.employeeTableEvenRow{
+   text-align:center;
+   background:#F0FFEB;
+   height:50px;	
+   border:1px solid #5C5C3D;
+}
+.employeeTableOddColumn{
+   border:1px solid #5C5C3D;
+}
+
+.employeeTableEvenColumn{
+   border:1px solid #5C5C3D	;
+}
