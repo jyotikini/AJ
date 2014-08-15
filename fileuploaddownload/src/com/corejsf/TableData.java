@@ -28,7 +28,7 @@ public class TableData implements Serializable {
 	public List<Name> filename;
 
 	public List<Name> getFilename() throws SQLException {
-		System.out.println("TableData");
+		//System.out.println("TableData");
 		/*
 		 * if(ds==null) throw new SQLException("Can't get data source");
 		 * 
@@ -58,12 +58,12 @@ public class TableData implements Serializable {
 				// store all data into a List
 				list.add(cust);
 				
-				System.out.println("File " + listOfFiles[i].getName());
+			//	System.out.println("File " + listOfFiles[i].getName());
 			} else if (listOfFiles[i].isDirectory()) {
-				System.out.println("Directory " + listOfFiles[i].getName());
+				//System.out.println("Directory " + listOfFiles[i].getName());
 			}
 		}
-		System.out.println(listOfFiles.length);
+		//System.out.println(listOfFiles.length);
 		return list;
 
 	}

@@ -62,8 +62,13 @@
 							styleClass="fileTable" headerClass="fileTableHeader"
 							rowClasses="fileTableOddRow,fileTableEvenRow">
 							<h:column>
-								
-								<h:commandLink styleClass="file-name-style" value="#{name.last}" action="index.xhtml" />
+
+								<h:commandLink styleClass="file-name-style" value="#{name.last}"
+									action="#{fileDownloadView.action()}">
+									<f:setPropertyActionListener
+										target="#{fileDownloadView.filename}" value="#{name.last}" />
+									<p:fileDownload value="#{fileDownloadView.file}" />
+								</h:commandLink>
 							</h:column>
 
 						</h:dataTable>
@@ -85,7 +90,7 @@
 		<div class="ui-dialog-div">
 			<h:form enctype="multipart/form-data">
 				<p:fileUpload value="#{fileUploadView.uploadedFile}" mode="simple"></p:fileUpload>
-				<h:commandButton value="submit" action="#{fileUploadView.submit()}"/>
+				<h:commandButton value="submit" action="#{fileUploadView.submit()}" />
 				<h:messages />
 			</h:form>
 		</div>

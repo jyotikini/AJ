@@ -24,9 +24,9 @@ public class FileUploadView {
 
 		// Just to demonstrate what information you can get from the uploaded
 		// file.
-		System.out.println("File type: " + uploadedFile.getContentType());
-		System.out.println("File name: " + uploadedFile.getFileName());
-		System.out.println("File size: " + uploadedFile.getSize() + " bytes");
+		//System.out.println("File type: " + uploadedFile.getContentType());
+		//System.out.println("File name: " + uploadedFile.getFileName());
+		//System.out.println("File size: " + uploadedFile.getSize() + " bytes");
 
 		// Prepare filename prefix and suffix for an unique filename in upload
 		// folder.
