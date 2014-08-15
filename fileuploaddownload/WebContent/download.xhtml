@@ -6,14 +6,14 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head></h:head>
 <body>
-	
 
-	<h:form>
-		<p:commandLink  ajax="false" value="download"
-			onclick="PrimeFaces.monitorDownload(start, stop);">
-			<p:fileDownload value="#{}" />
-		</p:commandLink>
-	</h:form>
+		<h:form>
+			<p:commandButton value="Download" ajax="false"
+				onclick="PrimeFaces.monitorDownload(start, stop);"
+				icon="ui-icon-arrowthick-1-s">
+				<p:fileDownload value="#{fileDownloadView.file}" />
+			</p:commandButton>
+		</h:form>
 
 	<script type="text/javascript">
 function start() {

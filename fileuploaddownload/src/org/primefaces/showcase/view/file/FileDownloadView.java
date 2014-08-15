@@ -19,18 +19,18 @@ public class FileDownloadView {
 	private StreamedContent file;
 
 	public FileDownloadView() {
-		InputStream stream = ((ServletContext) FacesContext
-				.getCurrentInstance().getExternalContext().getContext())
-				.getResourceAsStream("C:/Users/Asad/git/datatable/fileuploaddownload/WebContent/resources/default/uploads/Abuzar_2332647618847178449.jpg");
-		file = new DefaultStreamedContent(stream, "image/jpeg", "Abuzar_2332647618847178449.jpg");
-		//System.out.println(file.getName());
-		
+
 		// System.out.println("Number of file : " + count);
 
 	}
 
 	public StreamedContent getFile() {
-		System.out.println("getfile:"+file.getName());
+		InputStream stream = ((ServletContext) FacesContext
+				.getCurrentInstance().getExternalContext().getContext())
+				.getResourceAsStream("/resources/default/uploads/" + filename);
+		file = new DefaultStreamedContent(stream, "image/jpg", filename);
+		System.out.println(file.getName());
+		System.out.println("getfile:" + file.getName());
 		return file;
 	}
 
@@ -39,11 +39,13 @@ public class FileDownloadView {
 	}
 
 	public void setFilename(String filename) {
+		System.out.println("setFilename:" + filename);
 		this.filename = filename;
 	}
 
 	public void action() {
-		//System.out.println("file download view: " + filename);
-		
+
+		// System.out.println("file download view: " + filename);
+
 	}
 }
