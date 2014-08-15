@@ -3,16 +3,92 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title>Tomahawk file upload demo</title>
+	<h:outputStylesheet library="default" name="css/style.css"></h:outputStylesheet>
+	<h:outputScript library="default" name="script/GuyCarpenter.js"></h:outputScript>
+	<title>file upload</title>
 </h:head>
 <h:body>
-	<h:form enctype="multipart/form-data">
-		<p:fileUpload value="#{fileUploadView.uploadedFile}" mode="simple"></p:fileUpload>
-		<h:commandButton value="submit" action="#{fileUploadView.submit()}" />
-		<h:messages />
-	</h:form>
+
+	<div class="reports-n-achievements-n-trainings">
+		<div class="reports-n-achievements-n-trainings-individual-box-verti"
+			id="reports-section-verti">
+
+			<div
+				class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+				id="reports-section-plus"></div>
+			<div
+				class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+				id="reports-section-minus"></div>
+			<div class="reports-n-achievements-n-trainings-toggle-button"
+				id="reports-section-button" onclick="dlg2.show()"></div>
+
+			<div class="text-comtainer">
+				<div style="padding: 15px;">
+					<h:outputText value="#{editorBean.output}" escape="false"></h:outputText>
+				</div>
+			</div>
+		</div>
+		<div class="reports-n-achievements-n-trainings-individual-box-verti"
+			id="achievements-section-verti">
+			<div
+				class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+				id="achievements-section-plus"></div>
+			<div
+				class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+				id="achievements-section-minus"></div>
+			<div class="reports-n-achievements-n-trainings-toggle-button"
+				id="achievements-section-button"></div>
+			<div class="text-comtainer">
+				<div style="padding: 15px;">
+					<h:outputText value="#{editorBean.output}" escape="false"></h:outputText>
+				</div>
+			</div>
+		</div>
+
+		<div class="reports-n-achievements-n-trainings-individual-box-verti"
+			id="trainings-section-verti">
+			<div
+				class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+				id="trainings-section-plus"></div>
+			<div
+				class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+				id="trainings-section-minus"></div>
+			<div class="reports-n-achievements-n-trainings-toggle-button"
+				id="achievements-section-button"></div>
+			<div class="text-comtainer">
+				<div style="padding: 15px;">
+					<h:form>
+						<h:dataTable value="#{table.filename}" var="name"
+							styleClass="fileTable" headerClass="fileTableHeader"
+							rowClasses="fileTableOddRow,fileTableEvenRow">
+							<h:column>
+								
+								<h:commandLink styleClass="file-name-style" value="#{name.last}" action="index.xhtml" />
+							</h:column>
+
+						</h:dataTable>
+					</h:form>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="reports-n-achievements-n-trainings-individual-box-hori"
+				id="reports-section-hori"></div>
+			<div class="reports-n-achievements-n-trainings-individual-box-hori"
+				id="achievements-section-hori"></div>
+			<div class="reports-n-achievements-n-trainings-individual-box-hori"
+				id="trainings-section-hori"></div>
+		</div>
+	</div>
+
+	<p:dialog widgetVar="dlg2" modal="true" resizable="false">
+		<div class="ui-dialog-div">
+			<h:form enctype="multipart/form-data">
+				<p:fileUpload value="#{fileUploadView.uploadedFile}" mode="simple"></p:fileUpload>
+				<h:commandButton value="submit" action="#{fileUploadView.submit()}"/>
+				<h:messages />
+			</h:form>
+		</div>
+	</p:dialog>
 </h:body>
 </html>
-
-getCurrentInstance().getExternalContext().getContext()).getResourceAsStream(f.getAbsolutePath());
-        refrralFile  = new DefaultStreamedContent(is, new MimetypesFileTypeMap().getCont

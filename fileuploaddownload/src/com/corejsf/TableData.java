@@ -22,11 +22,12 @@ import com.corejsf.Name;
 @SessionScoped
 public class TableData implements Serializable {
 
-	@Resource(name = "jdbc/whiztechaj")
-	private DataSource ds;
-	int i = 0;
+	// @Resource(name = "jdbc/whiztechaj")
+	// private DataSource ds;
+	// int i = 0;
+	public List<Name> filename;
 
-	public List<Name> getNames() throws SQLException {
+	public List<Name> getFilename() throws SQLException {
 		System.out.println("TableData");
 		/*
 		 * if(ds==null) throw new SQLException("Can't get data source");
@@ -45,7 +46,7 @@ public class TableData implements Serializable {
 
 		List<Name> list = new ArrayList<Name>();
 		File folder = new File(
-				"C:/Users/Asad/git/datatable/Datatable/WebContent/resources/default/uploads");
+				"C:/Users/Asad/git/datatable/fileuploaddownload/WebContent/resources/default/uploads");
 		File[] listOfFiles = folder.listFiles();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
@@ -53,15 +54,18 @@ public class TableData implements Serializable {
 				Name cust = new Name();
 
 				cust.setLast(listOfFiles[i].getName());
-				cust.setFirst(listOfFiles[i].getPath());
+				cust.setFirst(listOfFiles[i].getAbsolutePath());
 				// store all data into a List
 				list.add(cust);
+				
 				System.out.println("File " + listOfFiles[i].getName());
 			} else if (listOfFiles[i].isDirectory()) {
 				System.out.println("Directory " + listOfFiles[i].getName());
 			}
 		}
-
+		System.out.println(listOfFiles.length);
 		return list;
+
 	}
+
 }

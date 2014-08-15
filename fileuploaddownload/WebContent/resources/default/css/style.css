@@ -283,3 +283,29 @@ table {
 .ui-editor-button:HOVER {
 	background-color: yellow !important;
 }
+
+/*file class styles below*/
+.fileTable {
+	text-align: center;
+	border-collapse: collapse;
+	
+	width:100%;
+	height:95%;
+}
+.fileTableOddRow:hover,.fileTableEvenRow:hover{
+	background-color: #eeeeee !important;
+	cursor: pointer;
+}
+.fileTableOddRow {
+	background-color: #dedede !important;
+}
+
+.fileTableEvenRow {
+	background-color: #cecece !important;
+}
+
+.file-name-style {
+	text-decoration: none;
+	font: monospace;
+	font-size: 15px;
+}

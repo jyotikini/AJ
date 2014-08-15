@@ -44,7 +44,7 @@ public class FileUploadView {
 							prefix + "_",
 							"." + suffix,
 							new File(
-									"C:/Users/Asad/workspace/fileuploaddownload/WebContent/resources/default/uploads"));
+									"C:/Users/Asad/git/datatable/fileuploaddownload/WebContent/resources/default/uploads"));
 			output = new FileOutputStream(file);
 			IOUtils.copy(uploadedFile.getInputstream(), output);
 			fileName = file.getName();
