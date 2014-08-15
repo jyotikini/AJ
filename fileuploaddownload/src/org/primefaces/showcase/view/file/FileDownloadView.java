@@ -17,7 +17,7 @@ public class FileDownloadView {
 	public FileDownloadView() {
 
 		int count = new File(
-				"C:/Users/Asad/workspace/fileuploaddownload/WebContent/resources/default/uploads")
+				"C:/Users/Asad/git/datatable/fileuploaddownload/WebContent/resources/default/uploads")
 				.list().length;
 		System.out.println("Number of file : " + count);
 
