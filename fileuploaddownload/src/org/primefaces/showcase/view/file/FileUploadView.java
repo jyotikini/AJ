@@ -48,7 +48,7 @@ public class FileUploadView {
 			output = new FileOutputStream(file);
 			IOUtils.copy(uploadedFile.getInputstream(), output);
 			fileName = file.getName();
-
+			
 			// Show succes message.
 			FacesContext.getCurrentInstance().addMessage(
 					"uploadForm",

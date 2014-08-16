@@ -286,26 +286,56 @@ table {
 
 /*file class styles below*/
 .fileTable {
-	text-align: center;
+	text-align: left;
 	border-collapse: collapse;
-	
-	width:100%;
-	height:95%;
+	width: 100%;
+	/*width:100%;*/
+	height: 95%;
 }
-.fileTableOddRow:hover,.fileTableEvenRow:hover{
+
+.fileTableOddRow:hover,.fileTableEvenRow:hover {
 	background-color: #eeeeee !important;
 	cursor: pointer;
 }
+
 .fileTableOddRow {
-	background-color: #dedede !important;
+	background-color: #cfcfcf !important;
 }
 
 .fileTableEvenRow {
-	background-color: #cecece !important;
+	background-color: #dadada !important;
+}
+
+.datatable-footer {
+	text-align: right;
+	float: right;
+	border: 1px solid black;
 }
 
 .file-name-style {
 	text-decoration: none;
 	font: monospace;
 	font-size: 15px;
+	color: black;
+}
+
+.file-name-style:hover {
+	text-decoration: underline;
+}
+
+.delete-file {
+	width: 20px!important;
+	height: 20px!important;
+	cursor : pointer;
+	border: 2px ridge black!important;
+}
+
+.delete-file:hover{
+	box-shadow: 1px 1px 5px 2px gray;
+}
+
+.delete-file:active{
+	opacity: 0.8;
+	border: 2px ridge transparent!important;
+	box-shadow: none!important;
 }

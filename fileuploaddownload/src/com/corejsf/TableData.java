@@ -26,6 +26,15 @@ public class TableData implements Serializable {
 	// private DataSource ds;
 	// int i = 0;
 	public List<Name> filename;
+	public File[] listOfFiles;
+	
+	
+	public File[] getListOfFiles() {
+		
+		return listOfFiles;
+	}
+
+
 
 	public List<Name> getFilename() throws SQLException {
 		//System.out.println("TableData");
@@ -47,14 +56,15 @@ public class TableData implements Serializable {
 		List<Name> list = new ArrayList<Name>();
 		File folder = new File(
 				"C:/Users/Asad/git/datatable/fileuploaddownload/WebContent/resources/default/uploads");
-		File[] listOfFiles = folder.listFiles();
-
+		listOfFiles = folder.listFiles();
+		
 		for (int i = 0; i < listOfFiles.length; i++) {
 			if (listOfFiles[i].isFile()) {
 				Name cust = new Name();
 
 				cust.setLast(listOfFiles[i].getName());
-				cust.setFirst(listOfFiles[i].getAbsolutePath());
+				cust.setFilenum(i);
+				
 				// store all data into a List
 				list.add(cust);
 				

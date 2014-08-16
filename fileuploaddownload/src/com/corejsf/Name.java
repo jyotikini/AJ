@@ -7,16 +7,27 @@ public class Name {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String first;
+	private int filenum;
 	private String last;
+	private String displayall="";
+	private String displaylink="";
 	
-	public String getFirst() {
-//		System.out.println("Name.getfirst");
-		return first;
+	public String getDisplayall() {
+		if(filenum<5)
+		{
+			displayall = "displayfive";
+		}
+		
+		return displayall;
 	}
-	public void setFirst(String first) {
-		this.first = first;
-	//	System.out.println("Name.setfirst");
+	
+	public int getFilenum() {
+		System.out.println("filenumber:" +filenum);
+		return filenum;
+	}
+	public void setFilenum(int filenum) {
+		System.out.println("filenumber:" +filenum);
+		this.filenum = filenum;
 	}
 	public String getLast() {
 	//	System.out.println("Name.getlast");

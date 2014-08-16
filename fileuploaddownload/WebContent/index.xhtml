@@ -55,14 +55,14 @@
 				id="trainings-section-minus"></div>
 			<div class="reports-n-achievements-n-trainings-toggle-button"
 				id="achievements-section-button"></div>
-			<div class="text-comtainer">
-				<div style="padding: 15px;">
+			<div class="text-comtainer" style="border: none !important;">
+				<div>
+
 					<h:form>
 						<h:dataTable value="#{table.filename}" var="name"
 							styleClass="fileTable" headerClass="fileTableHeader"
 							rowClasses="fileTableOddRow,fileTableEvenRow">
-							<h:column>
-
+							<h:column rendered='#{name.displayall=="displayfive"}'>
 								<h:commandLink styleClass="file-name-style" value="#{name.last}"
 									action="#{fileDownloadView.action()}">
 									<f:setPropertyActionListener
@@ -70,6 +70,15 @@
 									<p:fileDownload value="#{fileDownloadView.file}" />
 								</h:commandLink>
 							</h:column>
+							<h:column rendered='#{name.displayall=="displayfive"}'>
+								<h:commandButton image="/resources/default/images/delete.jpg" styleClass="delete-file" action="#" />
+							</h:column>
+
+							<f:facet name="footer">
+								<h:commandLink styleClass="datatable-footer"
+									value="View all uploads" action="#" />
+							</f:facet>
+
 
 						</h:dataTable>
 					</h:form>
