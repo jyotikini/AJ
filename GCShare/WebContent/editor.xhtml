@@ -1,139 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" 
-xmlns:h="http://java.sun.com/jsf/html"
-xmlns:f="http://java.sun.com/jsf/core"
-xmlns:ui="http://java.sun.com/jsf/facelets"
-xmlns:p="http://primefaces.org/ui"
->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
-<title>login</title>
-<style>
-
-	.nav-menu{
-	color:white;
+	<title>login</title>
+	<style>
+.nav-menu {
+	color: white;
 	text-decoration: none;
 	font-size: 20px;
 	font-family: sans-serif;
-	padding:2px 2px 2px 2px;
-	}
-	body{
-	background-color:#efefef;
-	margin:0px;
-	padding:0px;
-	}
-	div.menu-container li{
-	display:inline-table;
-	margin-left:40px;
-	}
-	div.menu-container{
-	width:100%;
-	height:inherit;
+	padding: 2px 2px 2px 2px;
+}
+
+body {
+	background-color: #efefef;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.menu-container li {
+	display: inline-table;
+	margin-left: 40px;
+}
+
+div.menu-container {
+	width: 100%;
+	height: inherit;
 	background-color: black;
 	text-decoration: none;
 	min-width: 1000px;
-	}
-	.nav-menu:hover{
+}
+
+.nav-menu:hover {
 	background-color: white;
-	color:black;
-	}
-	#admin{
-	float:right;
+	color: black;
+}
+
+#admin {
+	float: right;
 	margin-right: 20px;
-	}
-	
-        	.ui-dialog-content{
-        		background-color: #333333;
-        	}
-        	.ui-editor-group,.ui-editor-toolbar
-        	{
-        		background-image: none!important;
-        		//margin-left:100px;
-        	}
-        	.ui-dialog-titlebar{
-        		background-image: none!important;
-        		background-color: white;
-        	}
-        	.ui-dialog-titlebar:hover{
-        		
-        		background-color: #dedede!important;
-        		//border:1px solid black!important;
-        		
-        	}
-        	.ui-dialog{
-        		border: 1px solid #333333;
-        	}
-        	.ui-editor-button:HOVER 
-        	{
-				background-color: yellow!important;
-			}
-			
-	#header{
+}
+
+.ui-dialog-content {
+	background-color: #333333;
+}
+
+.ui-editor-group,.ui-editor-toolbar {
+	background-image: none !important; //
+	margin-left: 100px;
+}
+
+.ui-dialog-titlebar {
+	background-image: none !important;
+	background-color: white;
+}
+
+.ui-dialog-titlebar:hover {
+	background-color: #dedede !important; //
+	border: 1px solid black !important;
+}
+
+.ui-dialog {
+	border: 1px solid #333333;
+}
+
+.ui-editor-button:HOVER {
+	background-color: yellow !important;
+}
+
+#header {
 	width: 100%;
 	min-width: 1000px;
-	height:100px;
+	height: 100px;
 	background-color: white;
-	}
+}
 </style>
 </h:head>
 <f:view>
-<h:body>
-<div id = "header"></div>
+	<h:body>
+		<div id="header"></div>
 
 
-	
-<div class="menu-container">	
-	<li>
-		 <h:outputLink styleClass="nav-menu" value="#" >
-		            	<h:outputText value="Home"/>
-		            </h:outputLink>
-	            
-	          
-	</li>
-	<li>
-		<h:outputLink styleClass="nav-menu" value="#" >
-		            	<h:outputText value="Lorem Ipsum"/>
-		            </h:outputLink>
-	</li>
-	<li id ="admin">
-		<h:outputLink styleClass="nav-menu" value="#">
-		            	<h:outputText value="Welcome, Admin"/>
-		            </h:outputLink>
-	</li>
-</div>	
-	
-    	<h:panelGrid columns="1" cellpadding="5">	    
-		    <p:commandButton value="Edit" type="button" onclick="dlg2.show()" />		  
+
+		<div class="menu-container">
+			<li><h:outputLink styleClass="nav-menu" value="#">
+					<h:outputText value="Home" />
+				</h:outputLink></li>
+			<li><h:outputLink styleClass="nav-menu" value="#">
+					<h:outputText value="Lorem Ipsum" />
+				</h:outputLink></li>
+			<li id="admin"><h:outputLink styleClass="nav-menu" value="#">
+					<h:outputText value="Welcome, Admin" />
+				</h:outputLink></li>
+		</div>
+
+		<h:panelGrid columns="1" cellpadding="5">
+			<p:commandButton value="Edit" type="button" onclick="dlg2.show()" />
 		</h:panelGrid>
-	
+
 		<p:dialog widgetVar="dlg2" modal="true" resizable="false">
-			<div class = "ui-dialog-div">
-			    <h:outputText value="Edit Content here"/>
-			    <h:form>
-				    <p:growl id="message" showDetail="true"/>
-				    <p:editor value="#{editorBean.output}"  widgetVar="editContent" ></p:editor>
-				 	<p:commandButton value="Publish local"  action="editor?faces-redirect=true" update="message"  onclick="dlg2.hide();">
-				        <p:confirmDialog header="Confirmation" message="Are you sure?" icon="ui-icon-alert" />
-				    </p:commandButton>
+			<div class="ui-dialog-div">
+				<h:outputText value="Edit Content here" />
+				<h:form>
+					<p:growl id="message" showDetail="true" />
+					<p:editor value="#{editorBean.overview}" widgetVar="editContent"></p:editor>
+					<p:commandButton value="Publish local"
+						action="editor?faces-redirect=true" update="message"
+						onclick="dlg2.hide();">
+						<p:confirmDialog header="Confirmation" message="Are you sure?"
+							icon="ui-icon-alert" />
+					</p:commandButton>
 				</h:form>
 			</div>
 		</p:dialog>
-		
-					<div style="border:10px ridge #333333;box-shadow:5px 5px 5px #888888;position:absolute;background-color:white; border-radius:12px;margin-top:20px;width:300px;min-height: 100px;">
-						<div style="padding: 15px;">
-							<p:outputLabel value="#{editorBean.output}" escape="false"></p:outputLabel>
-						</div>
-					</div>
-			
-				
-			
-		<div style="position: relative;margin-top: 120px;float:right;margin-right: 100px;">
-				<h:form>
-						<!-- <h:inputHidden value="#{editorBean.value}" />-->
-						<p:commandButton actionListener="#{editorBean.setPublish()}" value="Publish Live!"></p:commandButton>
-				</h:form>
-				</div>   	
-    </h:body>
- </f:view>
+
+		<div
+			style="border: 10px ridge #333333; box-shadow: 5px 5px 5px #888888; position: absolute; background-color: white; border-radius: 12px; margin-top: 20px; width: 300px; min-height: 100px;">
+			<div style="padding: 15px;">
+				<p:outputLabel value="#{editorBean.overview}" escape="false"></p:outputLabel>
+			</div>
+		</div>
+
+
+
+		<div
+			style="position: relative; margin-top: 120px; float: right; margin-right: 100px;">
+			<h:form>
+				<p:commandButton actionListener="#{editorBean.setPublish()}"
+					value="Publish Live!"></p:commandButton>
+			</h:form>
+		</div>
+	</h:body>
+</f:view>
 </html>

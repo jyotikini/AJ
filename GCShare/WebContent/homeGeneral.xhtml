@@ -51,7 +51,13 @@
 					<table>
 						<tr>
 							<td id="carousel-section"></td>
-							<td id="overview-section"></td>
+							<td id="overview-section">
+								<div class="text-comtainer">
+									<div style="padding: 15px;">
+										<h:outputText value="#{editorBean.overviewGeneral}" escape="false"></h:outputText>
+									</div>
+								</div>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -65,7 +71,7 @@
 							id="reports-section-minus"></div>
 						<div class="text-comtainer">
 							<div style="padding: 15px;">
-								<h:outputText value="#{editorBean.value}" escape="false"></h:outputText>
+								<h:outputText value="#{editorBean.reportsGeneral}" escape="false"></h:outputText>
 							</div>
 						</div>
 					</div>
@@ -78,7 +84,7 @@
 							id="achievements-section-minus"></div>
 						<div class="text-comtainer">
 							<div style="padding: 15px;">
-								<h:outputText value="#{editorBean.value}" escape="false"></h:outputText>
+								<h:outputText value="#{editorBean.achievementsGeneral}" escape="false"></h:outputText>
 							</div>
 						</div>
 					</div>
@@ -93,7 +99,7 @@
 
 						<div class="text-comtainer">
 							<div style="padding: 15px;">
-								<h:outputText value="#{editorBean.value}" escape="false"></h:outputText>
+								<h:outputText value="#{editorBean.trainingsGeneral}" escape="false"></h:outputText>
 							</div>
 						</div>
 					</div>

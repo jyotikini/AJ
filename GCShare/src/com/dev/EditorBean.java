@@ -19,63 +19,94 @@
 	{  
 		private static final long serialVersionUID = 9202476277272066502L;
 		
-		private static String output;
-		private static String value="";
+		private static String overview;
+		private static String reports;
+		private static String achievements;
+		private static String trainings;
+		private static String overviewGeneral;
+		private static String reportsGeneral;
+		private static String achievementsGeneral;
+		private static String trainingsGeneral;
 		  
 
 	    public EditorBean() {
 	    	
 	    	System.out.println("constructor");
-	    }
-	     
+	    }	
 	    
-	    public String redirect() {
+	    
 
-	        FacesContext ctx = FacesContext.getCurrentInstance();
-
-	        ExternalContext extContext = ctx.getExternalContext();
-	        String url = extContext.encodeActionURL(ctx.getApplication().getViewHandler().getActionURL(ctx, "editor.xhtml"));
-	        System.out.println(url);
-	        try {
-
-	            extContext.redirect(url);
-	        } catch (IOException ioe) {
-	            throw new FacesException(ioe);
-
-	        }
-	        return null;
-	 
-	    }
-	    public void addMessage(String summary, String detail) {
-	        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, detail);
-	        FacesContext.getCurrentInstance().addMessage(null, message);
-	    }		
-	    	    
-		public String getOutput() {
-			System.out.println("getOutput()"+output);
-			return output;
+		public String getOverview() {
+			return overview;
 		}
+
+
+
+		public void setOverview(String overview) {
+			this.overview = overview;
+		}
+
+
+
+		public String getReports() {
+			return reports;
+		}
+
+
+
+		public void setReports(String reports) {
+			this.reports = reports;
+		}
+
+
+
+		public String getAchievements() {
+			return achievements;
+		}
+
+
+
+		public void setAchievements(String achievements) {
+			this.achievements = achievements;
+		}
+
+
+
+		public String getTrainings() {
+			return trainings;
+		}
+
+
+
+		public void setTrainings(String trainings) {
+			this.trainings = trainings;
+		}
+
+
+
+		public String getOverviewGeneral() {
+			return overviewGeneral;
+		}
+
+		public String getReportsGeneral() {
+			return reportsGeneral;
+		}
+
+		public String getAchievementsGeneral() {
+			return achievementsGeneral;
+		}
+		
+		public String getTrainingsGeneral() {
+			return trainingsGeneral;
+		}
+
 
 		public void setPublish(){
-			System.out.println("setPublish()"+this.value);
-			this.value=output;
-			System.out.println("setPublish()"+this.value);
+			this.overviewGeneral=overview;
+			this.reportsGeneral=reports;
+			this.achievementsGeneral=achievements;
+			this.trainingsGeneral=trainings;
+			
 		}
-		public void setOutput(String output) {
-			System.out.println("setOutput()"+output);
-			this.output = output;
-		}
-
-		public String getValue() {  
-	    	System.out.println("getValue()"+value);
-	        return value;  
-	    }  
 		
-	    public void setValue(String value) { 
-	    	System.out.println("setValue()"+value);
-	    	addMessage("System Error", value+"! Please try again later.");
-	        this.value = value;  
-	        //getOutValue();
-	    }
-	    
 	}  
