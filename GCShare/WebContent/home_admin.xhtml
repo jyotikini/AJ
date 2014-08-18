@@ -48,7 +48,16 @@
 					<table>
 						<tr>
 							<td id="carousel-section"></td>
-							<td id="overview-section"></td>
+							<td id="overview-section">
+								<div
+									class="reports-n-achievements-n-trainings-toggle-button-edit"
+									id="overview-section-button" onclick="dlg1.show()"></div>
+								<div class="text-comtainer">
+									<div style="padding: 15px;">
+										<h:outputText value="#{editorBean.output}" escape="false"></h:outputText>
+									</div>
+								</div>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -57,11 +66,13 @@
 						class="reports-n-achievements-n-trainings-individual-box-verti"
 						id="reports-section-verti">
 
-						<div class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+						<div
+							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
 							id="reports-section-plus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+						<div
+							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
 							id="reports-section-minus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button"
+						<div class="reports-n-achievements-n-trainings-toggle-button-edit"
 							id="reports-section-button" onclick="dlg2.show()"></div>
 
 						<div class="text-comtainer">
@@ -73,12 +84,14 @@
 					<div
 						class="reports-n-achievements-n-trainings-individual-box-verti"
 						id="achievements-section-verti">
-						<div class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+						<div
+							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
 							id="achievements-section-plus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+						<div
+							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
 							id="achievements-section-minus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button"
-							id="achievements-section-button"></div>
+						<div class="reports-n-achievements-n-trainings-toggle-button-edit"
+							id="achievements-section-button" onclick="dlg3.show()"></div>
 						<div class="text-comtainer">
 							<div style="padding: 15px;">
 								<h:outputText value="#{editorBean.output}" escape="false"></h:outputText>
@@ -89,12 +102,14 @@
 					<div
 						class="reports-n-achievements-n-trainings-individual-box-verti"
 						id="trainings-section-verti">
-						<div class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+						<div
+							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
 							id="trainings-section-plus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+						<div
+							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
 							id="trainings-section-minus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button"
-							id="achievements-section-button"></div>
+						<div class="reports-n-achievements-n-trainings-toggle-button-edit"
+							id="trainings-section-button" onclick="dlg4.show()"></div>
 						<div class="text-comtainer">
 							<div style="padding: 15px;">
 								<h:outputText value="#{editorBean.value}" escape="false"></h:outputText>
@@ -102,11 +117,14 @@
 						</div>
 					</div>
 					<div>
-						<div class="reports-n-achievements-n-trainings-individual-box-hori"
+						<div
+							class="reports-n-achievements-n-trainings-individual-box-hori"
 							id="reports-section-hori"></div>
-						<div class="reports-n-achievements-n-trainings-individual-box-hori"
+						<div
+							class="reports-n-achievements-n-trainings-individual-box-hori"
 							id="achievements-section-hori"></div>
-						<div class="reports-n-achievements-n-trainings-individual-box-hori"
+						<div
+							class="reports-n-achievements-n-trainings-individual-box-hori"
 							id="trainings-section-hori"></div>
 					</div>
 				</div>

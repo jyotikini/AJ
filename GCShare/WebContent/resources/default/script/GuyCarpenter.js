@@ -44,14 +44,15 @@ $(document)
 															+ "-hori")
 													.siblings().css("display",
 															"none");
-											/*
-											 * $(".reports-n-achievements-n-trainings-individual-box-verti")
-											 * .css("background-color",
-											 * "transparent"); $( "#" +
-											 * button_text_append +
-											 * "-verti").css(
-											 * "background-color", hori_color);
-											 */
+											$(
+													".reports-n-achievements-n-trainings-individual-box-verti")
+													.css("background-color",
+															"transparent");
+											$(
+													"#" + button_text_append
+															+ "-verti").css(
+													"background-color",
+													hori_color);
 											$(
 													"#" + button_text_append
 															+ "-plus").css(
@@ -82,14 +83,13 @@ $(document)
 															+ "-hori")
 													.siblings().css("display",
 															"none");
-											/*
-											 * $(".reports-n-achievements-n-trainings-individual-box-verti")
-											 * .css("background-color",
-											 * "transparent"); $( "#" +
-											 * button_text_append +
-											 * "-verti").css(
-											 * "background-color", hori_color);
-											 */
+											$("#reports-section-verti").css(
+													"background-color", "red");
+											$("#achievements-section-verti").css(
+													"background-color", "green");
+											$("#trainings-section-verti").css(
+													"background-color", "blue");
+											
 											$(
 													"#" + button_text_append
 															+ "-minus").css(

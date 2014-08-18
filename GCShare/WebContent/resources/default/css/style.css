@@ -148,20 +148,36 @@ table {
 	height: 500px;
 	float: left;
 	z-index: 0;
-	background-color: #dedede;
 }
 
 #reports-section-verti {
-	
+	background-color: red;
 	 
 }
 
 #achievements-section-verti {
-	
+	background-color: green;
 }
 
 #trainings-section-verti {
-	
+	background-color: blue;
+}
+.reports-n-achievements-n-trainings-toggle-button-edit
+{
+	margin-right: 8px;
+	border:2px ridge black;
+	float:right;
+	margin-top: 13px;	
+	cursor: pointer;
+}
+.reports-n-achievements-n-trainings-toggle-button-edit:hover {
+	box-shadow: 1px 1px 5px 2px gray;
+}
+
+.reports-n-achievements-n-trainings-toggle-button-edit:active {
+	opacity:0.8;
+	border:2px ridge transparent;
+	box-shadow:none;
 }
 
 .reports-n-achievements-n-trainings-toggle-button {
@@ -199,10 +215,10 @@ table {
 	background-image: url('../default/images/collapse.jpg');
 	display: none;
 }
-#reports-section-button, #achievements-section-button, #trainings-section-button{
+#reports-section-button, #achievements-section-button, #trainings-section-button, #overview-section-button{
 	width:20px;
 	height:20px;
-	margin-right:5px;
+	margin-right:10px;
 	background-image: url('../default/images/pencil.jpg');
 }
 
