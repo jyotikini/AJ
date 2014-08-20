@@ -5,7 +5,6 @@
 	width: 95%;
 	height: 85%;
 	margin: 55px auto;
-	
 }
 
 #main-container {
@@ -39,7 +38,6 @@ body {
 	padding: 0;
 	margin-top: 5px;
 	margin-left: 5px;
-	
 }
 
 .nav-menu-template .menu,.nav-menu {
@@ -56,13 +54,16 @@ body {
 	margin-top: -20px;
 	margin-right: 20px;
 }
+
 #menu-admin:hover {
-	text-decoration:underline;
+	text-decoration: underline;
 	cursor: pointer;
 }
-#menu-admin:active{
+
+#menu-admin:active {
 	color: maroon;
 }
+
 #text1 {
 	color: white !important;
 }
@@ -94,7 +95,6 @@ body {
 
 #menu-admin {
 	float: right;
-	
 }
 
 #nav-menu-container li {
@@ -152,7 +152,6 @@ table {
 
 #reports-section-verti {
 	background-color: red;
-	 
 }
 
 #achievements-section-verti {
@@ -162,31 +161,32 @@ table {
 #trainings-section-verti {
 	background-color: blue;
 }
-.reports-n-achievements-n-trainings-toggle-button-edit
-{
+
+.reports-n-achievements-n-trainings-toggle-button-edit {
 	margin-right: 8px;
-	border:2px ridge black;
-	float:right;
-	margin-top: 13px;	
+	border: 2px ridge black;
+	float: right;
+	margin-top: 13px;
 	cursor: pointer;
 }
+
 .reports-n-achievements-n-trainings-toggle-button-edit:hover {
 	box-shadow: 1px 1px 5px 2px gray;
 }
 
 .reports-n-achievements-n-trainings-toggle-button-edit:active {
-	opacity:0.8;
-	border:2px ridge transparent;
-	box-shadow:none;
+	opacity: 0.8;
+	border: 2px ridge transparent;
+	box-shadow: none;
 }
 
 .reports-n-achievements-n-trainings-toggle-button {
 	margin-right: 8px;
-	border:2px ridge black;
-	float:right;
-	margin-top: 13px;	
+	border: 2px ridge black;
+	float: right;
+	margin-top: 13px;
 	cursor: pointer;
-	/*border:0.5px ridge gray;*/		
+	/*border:0.5px ridge gray;*/
 }
 
 .reports-n-achievements-n-trainings-toggle-button:hover {
@@ -194,31 +194,33 @@ table {
 }
 
 .reports-n-achievements-n-trainings-toggle-button:active {
-	opacity:0.8;
-	border:2px ridge transparent;
-	box-shadow:none;
+	opacity: 0.8;
+	border: 2px ridge transparent;
+	box-shadow: none;
 }
 
-#reports-section-plus, #achievements-section-plus, #trainings-section-plus {
-	width:20px;
-	height:20px;
-	margin-right:10px;
+#reports-section-plus,#achievements-section-plus,#trainings-section-plus
+	{
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
 	background-image: url('../default/images/expand.jpg');
-	
 }
 
-#reports-section-minus, #achievements-section-minus, #trainings-section-minus {
-	
-	width:20px;
-	height:20px;
-	margin-right:10px;
+#reports-section-minus,#achievements-section-minus,#trainings-section-minus
+	{
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
 	background-image: url('../default/images/collapse.jpg');
 	display: none;
 }
-#reports-section-button, #achievements-section-button, #trainings-section-button, #overview-section-button{
-	width:20px;
-	height:20px;
-	margin-right:10px;
+
+#reports-section-button,#achievements-section-button,#trainings-section-button,#overview-section-button
+	{
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
 	background-image: url('../default/images/pencil.jpg');
 }
 
@@ -249,9 +251,9 @@ table {
 }
 
 .ui-editor-group,.ui-editor-toolbar {
-	background-image: none !important; //
-	margin-left: 100px;
+	background-image: none !important; 
 }
+
 
 .ui-dialog-titlebar {
 	background-image: none !important;
@@ -259,7 +261,7 @@ table {
 }
 
 .ui-dialog-titlebar:hover {
-	background-color: #dedede !important; //
+	background-color: #dedede !important; 
 	border: 1px solid black !important;
 }
 
@@ -270,9 +272,6 @@ table {
 .ui-editor-button:HOVER {
 	background-color: yellow !important;
 }
-
-
-
 
 /*Login dialog config below */
 .ui-dialog-content {
@@ -280,8 +279,7 @@ table {
 }
 
 .ui-editor-group,.ui-editor-toolbar {
-	background-image: none !important; //
-	margin-left: 100px;
+	background-image: none !important; 
 }
 
 .ui-dialog-titlebar {
@@ -290,7 +288,7 @@ table {
 }
 
 .ui-dialog-titlebar:hover {
-	background-color: #dedede !important; //
+	background-color: #dedede !important; 
 	border: 1px solid black !important;
 }
 
@@ -300,4 +298,60 @@ table {
 
 .ui-editor-button:HOVER {
 	background-color: yellow !important;
+}
+
+/*file class styles below*/
+.fileTable {
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+	/*width:100%;*/
+	height: 95%;
+}
+
+.fileTableOddRow:hover,.fileTableEvenRow:hover {
+	background-color: #eeeeee !important;
+	cursor: pointer;
+}
+
+.fileTableOddRow {
+	background-color: #cfcfcf !important;
+}
+
+.fileTableEvenRow {
+	background-color: #dadada !important;
+}
+
+.datatable-footer {
+	text-align: right;
+	float: right;
+	border: 1px solid black;
+}
+
+.file-name-style {
+	text-decoration: none;
+	font: monospace;
+	font-size: 15px;
+	color: black;
+}
+
+.file-name-style:hover {
+	text-decoration: underline;
+}
+
+.delete-file {
+	width: 20px !important;
+	height: 20px !important;
+	cursor: pointer;
+	border: 2px ridge black !important;
+}
+
+.delete-file:hover {
+	box-shadow: 1px 1px 5px 2px gray;
+}
+
+.delete-file:active {
+	opacity: 0.8;
+	border: 2px ridge transparent !important;
+	box-shadow: none !important;
 }
