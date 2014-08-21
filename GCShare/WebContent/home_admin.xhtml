@@ -7,42 +7,12 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<h:outputStylesheet library="default" name="css/style.css"></h:outputStylesheet>
-	<h:outputScript library="default" name="script/GuyCarpenter.js"></h:outputScript>
-	<title>Login</title>
+	<title>Admin</title>
 </h:head>
-<f:view>
-	<h:body>
 
-		<div id="main-container">
-			<div id="main-header">
-				<div id="image-container">
-					<img src="HeaderImage_Logo_CompanyName.png" />
-				</div>
-				<div id="menu-admin">Hello, Admin</div>
-			</div>
-
-			<div class="nav-menu-template" id="nav-menu-container"
-				style="background-image: url('../resources/default/images/TopMenu1.png')">
-				<div class="menu-items-slider" id="menu-items">
-					<li class="menu" id="menu-home">Home</li>
-					<li
-						Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-					<li class="menu" id="menu-reports">Reports</li>
-					<li
-						Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-					<li class="menu" id="menu-achievements">Achievements</li>
-					<li
-						Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-					<li class="menu" id="menu-trainings">Trainings</li>
-					<li
-						Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-					<li class="menu" id="menu-events">Events</li>
-					<li
-						Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-					<li class="menu" id="menu-aboutus">About Us</li>
-				</div>
-			</div>
+<h:body>
+	<ui:composition template="templates/masterLayout.xhtml">
+		<ui:define name="content">
 			<div id="main-body">
 				<div id="carousel-n-overview">
 					<table>
@@ -50,9 +20,9 @@
 							<td id="carousel-section"></td>
 							<td id="overview-section">
 								<div
-									class="reports-n-achievements-n-trainings-toggle-button-edit"
+									class="reports-n-achievements-n-training-toggle-button-edit"
 									id="overview-section-button" onclick="dlg1.show()"></div>
-								<div class="text-comtainer">
+								<div class="text-container">
 									<div style="padding: 15px;">
 										<h:outputText value="#{editorBean.overview}" escape="false"></h:outputText>
 									</div>
@@ -61,38 +31,45 @@
 						</tr>
 					</table>
 				</div>
-				<div class="reports-n-achievements-n-trainings">
+				<div class="reports-n-achievements-n-training">
 					<div
-						class="reports-n-achievements-n-trainings-individual-box-verti"
+						class="reports-n-achievements-n-training-individual-box-verti"
 						id="reports-section-verti">
 
 						<div
-							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-plus"
 							id="reports-section-plus"></div>
 						<div
-							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-minus"
 							id="reports-section-minus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button-edit"
+						<div class="reports-n-achievements-n-training-toggle-button-edit"
 							id="reports-section-button" onclick="dlg2.show()"></div>
+						
+						<div class="text-container-upper">
+						REPORTS
+						</div>
 
-						<div class="text-comtainer">
+						<div class="text-container">
 							<div style="padding: 15px;">
 								<h:outputText value="#{editorBean.reports}" escape="false"></h:outputText>
 							</div>
 						</div>
 					</div>
 					<div
-						class="reports-n-achievements-n-trainings-individual-box-verti"
+						class="reports-n-achievements-n-training-individual-box-verti"
 						id="achievements-section-verti">
 						<div
-							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
+							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-plus"
 							id="achievements-section-plus"></div>
 						<div
-							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
+							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-minus"
 							id="achievements-section-minus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button-edit"
+						<div class="reports-n-achievements-n-training-toggle-button-edit"
 							id="achievements-section-button" onclick="dlg3.show()"></div>
-						<div class="text-comtainer">
+						<div class="text-container-upper">
+						ACHIEVEMENTS
+						</div>
+						<div class="text-container">
 							<div style="padding: 15px;">
 								<h:outputText value="#{editorBean.achievements}" escape="false"></h:outputText>
 							</div>
@@ -100,32 +77,62 @@
 					</div>
 
 					<div
-						class="reports-n-achievements-n-trainings-individual-box-verti"
-						id="trainings-section-verti">
+						class="reports-n-achievements-n-training-individual-box-verti"
+						id="training-section-verti">
 						<div
-							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-plus"
-							id="trainings-section-plus"></div>
+							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-plus"
+							id="training-section-plus"></div>
 						<div
-							class="reports-n-achievements-n-trainings-toggle-button reports-n-achievements-n-trainings-toggle-button-minus"
-							id="trainings-section-minus"></div>
-						<div class="reports-n-achievements-n-trainings-toggle-button-edit"
-							id="trainings-section-button" onclick="dlg4.show()"></div>
-						<div class="text-comtainer">
+							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-minus"
+							id="training-section-minus"></div>
+						<div class="reports-n-achievements-n-training-toggle-button-edit"
+							id="training-section-button" onclick="dlg4.show()"></div>
+						
+						<div class="text-container-upper">
+						TRAINING
+						</div><div class="text-container">
 							<div style="padding: 15px;">
-								<h:outputText value="#{editorBean.trainings}" escape="false"></h:outputText>
+								<h:outputText value="#{editorBean.training}" escape="false"></h:outputText>
 							</div>
 						</div>
 					</div>
 					<div>
 						<div
-							class="reports-n-achievements-n-trainings-individual-box-hori"
-							id="reports-section-hori"></div>
+							class="reports-n-achievements-n-training-individual-box-hori"
+							id="reports-section-hori">
+							<h:form>
+								<h:dataTable value="#{table.filename}" var="name"
+									styleClass="fileTable" headerClass="fileTableHeader"
+									rowClasses="fileTableOddRow,fileTableEvenRow">
+									<h:column rendered='#{name.displayall=="displayfive"}'>
+										<h:commandLink styleClass="file-name-style"
+											value="#{name.last}" action="#{fileDownloadView.action()}">
+											<f:setPropertyActionListener
+												target="#{fileDownloadView.filename}" value="#{name.last}" />
+											<p:fileDownload value="#{fileDownloadView.file}" />
+										</h:commandLink>
+									</h:column>
+									<h:column rendered='#{name.displayall=="displayfive"}'>
+										<h:commandButton image="/resources/default/images/delete.png"
+											styleClass="delete-file" action="#" />
+									</h:column>
+
+									<f:facet name="footer">
+										<h:commandLink styleClass="datatable-footer"
+											value="View all uploads" action="#" />
+									</f:facet>
+
+
+								</h:dataTable>
+							</h:form>
+
+						</div>
 						<div
-							class="reports-n-achievements-n-trainings-individual-box-hori"
+							class="reports-n-achievements-n-training-individual-box-hori"
 							id="achievements-section-hori"></div>
 						<div
-							class="reports-n-achievements-n-trainings-individual-box-hori"
-							id="trainings-section-hori"></div>
+							class="reports-n-achievements-n-training-individual-box-hori"
+							id="training-section-hori"></div>
 					</div>
 				</div>
 			</div>
@@ -139,14 +146,14 @@
 						<p:editor value="#{editorBean.overview}" widgetVar="editContent"></p:editor>
 						<p:commandButton value="Publish local"
 							action="home_admin?faces-redirect=true" update="message"
-							onclick="dlg2.hide();">
+							onclick="dlg1.hide();">
 							<p:confirmDialog header="Confirmation" message="Are you sure?"
 								icon="ui-icon-alert" />
 						</p:commandButton>
 					</h:form>
 				</div>
 			</p:dialog>
-			
+
 			<p:dialog widgetVar="dlg2" modal="true" resizable="false">
 				<div class="ui-dialog-div">
 					<h:outputText value="Edit Content here" />
@@ -162,48 +169,51 @@
 					</h:form>
 				</div>
 			</p:dialog>
-			
+
 			<p:dialog widgetVar="dlg3" modal="true" resizable="false">
 				<div class="ui-dialog-div">
 					<h:outputText value="Edit Content here" />
 					<h:form>
 						<p:growl id="message" showDetail="true" />
-						<p:editor value="#{editorBean.achievements}" widgetVar="editContent"></p:editor>
+						<p:editor value="#{editorBean.achievements}"
+							widgetVar="editContent"></p:editor>
 						<p:commandButton value="Publish local"
 							action="home_admin?faces-redirect=true" update="message"
-							onclick="dlg2.hide();">
+							onclick="dlg3.hide();">
 							<p:confirmDialog header="Confirmation" message="Are you sure?"
 								icon="ui-icon-alert" />
 						</p:commandButton>
 					</h:form>
 				</div>
 			</p:dialog>
-			
+
 			<p:dialog widgetVar="dlg4" modal="true" resizable="false">
 				<div class="ui-dialog-div">
 					<h:outputText value="Edit Content here" />
 					<h:form>
 						<p:growl id="message" showDetail="true" />
-						<p:editor value="#{editorBean.trainings}" widgetVar="editContent"></p:editor>
+						<p:editor value="#{editorBean.training}" widgetVar="editContent"></p:editor>
 						<p:commandButton value="Publish local"
 							action="home_admin?faces-redirect=true" update="message"
-							onclick="dlg2.hide();">
+							onclick="dlg4.hide();">
 							<p:confirmDialog header="Confirmation" message="Are you sure?"
 								icon="ui-icon-alert" />
 						</p:commandButton>
 					</h:form>
 				</div>
 			</p:dialog>
-			
-			
-			
-			<div style="text-align: center;">
+
+
+			<!-- <div style="text-align: center;">
 				<h:form>
 					<p:commandButton actionListener="#{editorBean.setPublish()}"
 						value="Publish Live!"></p:commandButton>
 				</h:form>
-			</div>
-		</div>
-	</h:body>
-</f:view>
+			</div>-->
+
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+
 </html>

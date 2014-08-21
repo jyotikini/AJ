@@ -22,11 +22,11 @@
 		private static String overview;
 		private static String reports;
 		private static String achievements;
-		private static String trainings;
+		private static String training;
 		private static String overviewGeneral;
 		private static String reportsGeneral;
 		private static String achievementsGeneral;
-		private static String trainingsGeneral;
+		private static String trainingGeneral;
 		  
 
 	    public EditorBean() {
@@ -72,14 +72,14 @@
 
 
 
-		public String getTrainings() {
-			return trainings;
+		public String getTraining() {
+			return training;
 		}
 
 
 
-		public void setTrainings(String trainings) {
-			this.trainings = trainings;
+		public void setTraining(String training) {
+			this.training = training;
 		}
 
 
@@ -96,8 +96,8 @@
 			return achievementsGeneral;
 		}
 		
-		public String getTrainingsGeneral() {
-			return trainingsGeneral;
+		public String getTrainingGeneral() {
+			return trainingGeneral;
 		}
 
 
@@ -105,7 +105,7 @@
 			this.overviewGeneral=overview;
 			this.reportsGeneral=reports;
 			this.achievementsGeneral=achievements;
-			this.trainingsGeneral=trainings;
+			this.trainingGeneral=training;
 			
 		}
 		

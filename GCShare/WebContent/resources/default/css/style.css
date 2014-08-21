@@ -1,6 +1,16 @@
 @CHARSET "ISO-8859-1";
 
-.text-comtainer {
+.text-container-upper {
+	color:black;
+	margin-left: 150px;
+	margin-top: 16px;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bolder;	
+	position:absolute;
+}
+
+.text-container {
 	border: 1px solid gray;
 	width: 95%;
 	height: 85%;
@@ -33,11 +43,13 @@ body {
 	margin: 0;
 }
 
-#image-container img {
+#image-container {
 	height: 90px;
+	width: 90px;
 	padding: 0;
 	margin-top: 5px;
 	margin-left: 5px;
+	background-image: url('../default/images/WhizTechLogo.png');
 }
 
 .nav-menu-template .menu,.nav-menu {
@@ -136,12 +148,12 @@ table {
 	background-color: yellow;
 }
 
-.reports-n-achievements-n-trainings {
+.reports-n-achievements-n-training {
 	width: 100%;
 	min-width: 1024px;
 }
 
-.reports-n-achievements-n-trainings-individual-box-verti {
+.reports-n-achievements-n-training-individual-box-verti {
 	box-sizing: border-box;
 	width: 32%;
 	margin: 1% 0% 0% 1%;
@@ -158,11 +170,11 @@ table {
 	background-color: green;
 }
 
-#trainings-section-verti {
+#training-section-verti {
 	background-color: blue;
 }
 
-.reports-n-achievements-n-trainings-toggle-button-edit {
+.reports-n-achievements-n-training-toggle-button-edit {
 	margin-right: 8px;
 	border: 2px ridge black;
 	float: right;
@@ -170,17 +182,17 @@ table {
 	cursor: pointer;
 }
 
-.reports-n-achievements-n-trainings-toggle-button-edit:hover {
+.reports-n-achievements-n-training-toggle-button-edit:hover {
 	box-shadow: 1px 1px 5px 2px gray;
 }
 
-.reports-n-achievements-n-trainings-toggle-button-edit:active {
+.reports-n-achievements-n-training-toggle-button-edit:active {
 	opacity: 0.8;
 	border: 2px ridge transparent;
 	box-shadow: none;
 }
 
-.reports-n-achievements-n-trainings-toggle-button {
+.reports-n-achievements-n-training-toggle-button {
 	margin-right: 8px;
 	border: 2px ridge black;
 	float: right;
@@ -189,17 +201,17 @@ table {
 	/*border:0.5px ridge gray;*/
 }
 
-.reports-n-achievements-n-trainings-toggle-button:hover {
+.reports-n-achievements-n-training-toggle-button:hover {
 	box-shadow: 1px 1px 5px 2px gray;
 }
 
-.reports-n-achievements-n-trainings-toggle-button:active {
+.reports-n-achievements-n-training-toggle-button:active {
 	opacity: 0.8;
 	border: 2px ridge transparent;
 	box-shadow: none;
 }
 
-#reports-section-plus,#achievements-section-plus,#trainings-section-plus
+#reports-section-plus,#achievements-section-plus,#training-section-plus
 	{
 	width: 20px;
 	height: 20px;
@@ -207,7 +219,7 @@ table {
 	background-image: url('../default/images/expand.jpg');
 }
 
-#reports-section-minus,#achievements-section-minus,#trainings-section-minus
+#reports-section-minus,#achievements-section-minus,#training-section-minus
 	{
 	width: 20px;
 	height: 20px;
@@ -216,7 +228,7 @@ table {
 	display: none;
 }
 
-#reports-section-button,#achievements-section-button,#trainings-section-button,#overview-section-button
+#reports-section-button,#achievements-section-button,#training-section-button,#overview-section-button
 	{
 	width: 20px;
 	height: 20px;
@@ -224,7 +236,7 @@ table {
 	background-image: url('../default/images/pencil.jpg');
 }
 
-.reports-n-achievements-n-trainings-individual-box-hori {
+.reports-n-achievements-n-training-individual-box-hori {
 	box-sizing: border-box;
 	width: 98%;
 	min-width: 1004px;
@@ -242,8 +254,25 @@ table {
 	background-color: green;
 }
 
-#trainings-section-hori {
+#training-section-hori {
 	background-color: blue;
+}
+
+#main-footer {
+	background-image: url('../default/images/Footer.png');
+	width: 100%;
+	min-width: 1024px;
+	padding: 0;
+	margin: 0;
+	height: 150px;
+}
+
+#main-footer p {
+	font-family: cambria;
+	font-size: 11px;
+	color: gray;
+	margin-left: 450px;
+	margin-top: 527px;
 }
 /*Editor config below*/
 .ui-dialog-content {
@@ -251,9 +280,9 @@ table {
 }
 
 .ui-editor-group,.ui-editor-toolbar {
-	background-image: none !important; 
+	background-image: none !important;
+	margin-left: 0px !important;
 }
-
 
 .ui-dialog-titlebar {
 	background-image: none !important;
@@ -261,7 +290,7 @@ table {
 }
 
 .ui-dialog-titlebar:hover {
-	background-color: #dedede !important; 
+	background-color: #dedede !important;
 	border: 1px solid black !important;
 }
 
@@ -278,17 +307,13 @@ table {
 	background-color: #333333;
 }
 
-.ui-editor-group,.ui-editor-toolbar {
-	background-image: none !important; 
-}
-
 .ui-dialog-titlebar {
 	background-image: none !important;
 	background-color: white;
 }
 
 .ui-dialog-titlebar:hover {
-	background-color: #dedede !important; 
+	background-color: #dedede !important;
 	border: 1px solid black !important;
 }
 

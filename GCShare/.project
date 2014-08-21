@@ -3,6 +3,7 @@
 	<name>GCShare</name>
 	<comment></comment>
 	<projects>
+		<project>fileuploaddownload</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
