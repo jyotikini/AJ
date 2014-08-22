@@ -2,13 +2,14 @@
 
 .text-container-upper {
 	color:black;
-	margin-left: 150px;
-	margin-top: 16px;
+	margin-top:12px;
+	margin-left:3%;
+	text-align: center;
 	font-family: Arial;
 	font-size: 20px;
 	font-weight: bolder;	
 	position:absolute;
-}
+	}
 
 .text-container {
 	border: 1px solid gray;
@@ -257,7 +258,24 @@ table {
 #training-section-hori {
 	background-color: blue;
 }
-
+.reports-n-achievements-n-training-hori-sections
+{
+	box-sizing: border-box;
+	height: 425px;
+	float: left;
+	z-index: 0;
+	border:1px solid gray;
+}
+#reports-n-achievements-n-training-hori-sections-left
+{
+	margin: 0.65% 0% 0% 1%;
+	width:30.5%;
+}
+#reports-n-achievements-n-training-hori-sections-right
+{
+	margin:0.65% 0% 0% 1.7%;
+	width:65.5%;
+}
 #main-footer {
 	background-image: url('../default/images/Footer.png');
 	width: 100%;

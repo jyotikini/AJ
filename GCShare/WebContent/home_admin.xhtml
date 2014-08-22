@@ -32,8 +32,7 @@
 					</table>
 				</div>
 				<div class="reports-n-achievements-n-training">
-					<div
-						class="reports-n-achievements-n-training-individual-box-verti"
+					<div class="reports-n-achievements-n-training-individual-box-verti"
 						id="reports-section-verti">
 
 						<div
@@ -44,10 +43,8 @@
 							id="reports-section-minus"></div>
 						<div class="reports-n-achievements-n-training-toggle-button-edit"
 							id="reports-section-button" onclick="dlg2.show()"></div>
-						
-						<div class="text-container-upper">
-						REPORTS
-						</div>
+
+						<div class="text-container-upper">REPORTS</div>
 
 						<div class="text-container">
 							<div style="padding: 15px;">
@@ -55,8 +52,7 @@
 							</div>
 						</div>
 					</div>
-					<div
-						class="reports-n-achievements-n-training-individual-box-verti"
+					<div class="reports-n-achievements-n-training-individual-box-verti"
 						id="achievements-section-verti">
 						<div
 							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-plus"
@@ -66,9 +62,7 @@
 							id="achievements-section-minus"></div>
 						<div class="reports-n-achievements-n-training-toggle-button-edit"
 							id="achievements-section-button" onclick="dlg3.show()"></div>
-						<div class="text-container-upper">
-						ACHIEVEMENTS
-						</div>
+						<div class="text-container-upper">ACHIEVEMENTS</div>
 						<div class="text-container">
 							<div style="padding: 15px;">
 								<h:outputText value="#{editorBean.achievements}" escape="false"></h:outputText>
@@ -76,8 +70,7 @@
 						</div>
 					</div>
 
-					<div
-						class="reports-n-achievements-n-training-individual-box-verti"
+					<div class="reports-n-achievements-n-training-individual-box-verti"
 						id="training-section-verti">
 						<div
 							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-plus"
@@ -87,52 +80,135 @@
 							id="training-section-minus"></div>
 						<div class="reports-n-achievements-n-training-toggle-button-edit"
 							id="training-section-button" onclick="dlg4.show()"></div>
-						
-						<div class="text-container-upper">
-						TRAINING
-						</div><div class="text-container">
+
+						<div class="text-container-upper">TRAINING</div>
+						<div class="text-container">
 							<div style="padding: 15px;">
 								<h:outputText value="#{editorBean.training}" escape="false"></h:outputText>
 							</div>
 						</div>
 					</div>
 					<div>
-						<div
-							class="reports-n-achievements-n-training-individual-box-hori"
+						<div class="reports-n-achievements-n-training-individual-box-hori"
 							id="reports-section-hori">
-							<h:form>
-								<h:dataTable value="#{table.filename}" var="name"
-									styleClass="fileTable" headerClass="fileTableHeader"
-									rowClasses="fileTableOddRow,fileTableEvenRow">
-									<h:column rendered='#{name.displayall=="displayfive"}'>
-										<h:commandLink styleClass="file-name-style"
-											value="#{name.last}" action="#{fileDownloadView.action()}">
-											<f:setPropertyActionListener
-												target="#{fileDownloadView.filename}" value="#{name.last}" />
-											<p:fileDownload value="#{fileDownloadView.file}" />
-										</h:commandLink>
-									</h:column>
-									<h:column rendered='#{name.displayall=="displayfive"}'>
-										<h:commandButton image="/resources/default/images/delete.png"
-											styleClass="delete-file" action="#" />
-									</h:column>
+							<div
+								class="reports-n-achievements-n-training-hori-sections"
+								id="reports-n-achievements-n-training-hori-sections-left">
+								<div style="padding: 15px;">
+									<h:outputText value="#{editorBean.reports}" escape="false"></h:outputText>
+								</div>
+							</div>
+							<div
+								class="reports-n-achievements-n-training-hori-sections"
+								id="reports-n-achievements-n-training-hori-sections-right">
+								<h:form>
+									<h:dataTable value="#{table.filename}" var="name"
+										styleClass="fileTable" headerClass="fileTableHeader"
+										rowClasses="fileTableOddRow,fileTableEvenRow">
+										<h:column rendered='#{name.displayall=="displayfive"}'>
+											<h:commandLink styleClass="file-name-style"
+												value="#{name.last}" action="#{fileDownloadView.action()}">
+												<f:setPropertyActionListener
+													target="#{fileDownloadView.filename}" value="#{name.last}" />
+												<p:fileDownload value="#{fileDownloadView.file}" />
+											</h:commandLink>
+										</h:column>
+										<h:column rendered='#{name.displayall=="displayfive"}'>
+											<h:commandButton image="/resources/default/images/delete.png"
+												styleClass="delete-file" action="#" />
+										</h:column>
 
-									<f:facet name="footer">
-										<h:commandLink styleClass="datatable-footer"
-											value="View all uploads" action="#" />
-									</f:facet>
+										<f:facet name="footer">
+											<h:commandLink styleClass="datatable-footer"
+												value="View all uploads" action="#" />
+										</f:facet>
 
 
-								</h:dataTable>
-							</h:form>
+									</h:dataTable>
+								</h:form>
+							</div>
+						</div>
+						<div class="reports-n-achievements-n-training-individual-box-hori"
+							id="achievements-section-hori">
+							<div
+								class="reports-n-achievements-n-training-hori-sections"
+								id="reports-n-achievements-n-training-hori-sections-left">
+								<div style="padding: 15px;">
+									<h:outputText value="#{editorBean.achievements}" escape="false"></h:outputText>
+								</div>
+							</div>
+							<div
+								class="reports-n-achievements-n-training-hori-sections"
+								id="reports-n-achievements-n-training-hori-sections-right">
+								<h:form>
+									<h:dataTable value="#{table.filename}" var="name"
+										styleClass="fileTable" headerClass="fileTableHeader"
+										rowClasses="fileTableOddRow,fileTableEvenRow">
+										<h:column rendered='#{name.displayall=="displayfive"}'>
+											<h:commandLink styleClass="file-name-style"
+												value="#{name.last}" action="#{fileDownloadView.action()}">
+												<f:setPropertyActionListener
+													target="#{fileDownloadView.filename}" value="#{name.last}" />
+												<p:fileDownload value="#{fileDownloadView.file}" />
+											</h:commandLink>
+										</h:column>
+										<h:column rendered='#{name.displayall=="displayfive"}'>
+											<h:commandButton image="/resources/default/images/delete.png"
+												styleClass="delete-file" action="#" />
+										</h:column>
+
+										<f:facet name="footer">
+											<h:commandLink styleClass="datatable-footer"
+												value="View all uploads" action="#" />
+										</f:facet>
+
+
+									</h:dataTable>
+								</h:form>
+							</div>
+
 
 						</div>
-						<div
-							class="reports-n-achievements-n-training-individual-box-hori"
-							id="achievements-section-hori"></div>
-						<div
-							class="reports-n-achievements-n-training-individual-box-hori"
-							id="training-section-hori"></div>
+						<div class="reports-n-achievements-n-training-individual-box-hori"
+							id="training-section-hori">
+							<div
+								class="reports-n-achievements-n-training-hori-sections"
+								id="reports-n-achievements-n-training-hori-sections-left">
+								<div style="padding: 15px;">
+									<h:outputText value="#{editorBean.training}" escape="false"></h:outputText>
+								</div>
+							</div>
+							<div
+								class="reports-n-achievements-n-training-hori-sections"
+								id="reports-n-achievements-n-training-hori-sections-right">
+								<h:form>
+									<h:dataTable value="#{table.filename}" var="name"
+										styleClass="fileTable" headerClass="fileTableHeader"
+										rowClasses="fileTableOddRow,fileTableEvenRow">
+										<h:column rendered='#{name.displayall=="displayfive"}'>
+											<h:commandLink styleClass="file-name-style"
+												value="#{name.last}" action="#{fileDownloadView.action()}">
+												<f:setPropertyActionListener
+													target="#{fileDownloadView.filename}" value="#{name.last}" />
+												<p:fileDownload value="#{fileDownloadView.file}" />
+											</h:commandLink>
+										</h:column>
+										<h:column rendered='#{name.displayall=="displayfive"}'>
+											<h:commandButton image="/resources/default/images/delete.png"
+												styleClass="delete-file" action="#" />
+										</h:column>
+
+										<f:facet name="footer">
+											<h:commandLink styleClass="datatable-footer"
+												value="View all uploads" action="#" />
+										</f:facet>
+
+
+									</h:dataTable>
+								</h:form>
+							</div>
+
+						</div>
 					</div>
 				</div>
 			</div>
