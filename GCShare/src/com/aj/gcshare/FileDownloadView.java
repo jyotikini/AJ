@@ -1,4 +1,4 @@
-package org.primefaces.showcase.view.file;
+package com.aj.gcshare;
 
 import java.io.File;
 

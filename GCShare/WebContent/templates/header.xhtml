@@ -2,6 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <body>
 	<ui:composition>
@@ -13,22 +15,33 @@
 		<div class="nav-menu-template" id="nav-menu-container"
 			style="background-image: url('../resources/default/images/TopMenu1.png')">
 			<div class="menu-items-slider" id="menu-items">
-				<li class="menu" id="menu-home">Home</li>
+				<li class="menu" id="menu-home">
+				 
+				<h:link outcome="home_admin" value="Home"/>
+				</li>
 				<li
 					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-				<li class="menu" id="menu-reports">Reports</li>
+				<li class="menu" id="menu-reports">
+				<h:link outcome="Reports" value="Reports"/>
+				
+				</li>
 				<li
 					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-				<li class="menu" id="menu-achievements">Achievements</li>
+				<li class="menu" id="menu-achievements">
+				<h:link outcome="Achievements" value="Achievements"/>
+				</li>
 				<li
 					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-				<li class="menu" id="menu-trainings">Trainings</li>
+				<li class="menu" id="menu-training">
+				<h:link outcome="Training" value="Training"/></li>
 				<li
 					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-				<li class="menu" id="menu-events">Events</li>
+				<li class="menu" id="menu-events">
+				<h:link outcome="Events" value="Events"/></li>
 				<li
 					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
-				<li class="menu" id="menu-aboutus">About Us</li>
+				<li class="menu" id="menu-aboutus">
+				<h:link outcome="AboutUs" value="About Us"/></li>
 			</div>
 		</div>
 	</ui:composition>

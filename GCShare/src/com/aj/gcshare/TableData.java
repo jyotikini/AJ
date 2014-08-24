@@ -1,4 +1,4 @@
-package com.corejsf;
+package com.aj.gcshare;
 
 import java.io.File;
 import java.io.Serializable;
@@ -16,7 +16,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import com.corejsf.Name;
+
+import com.aj.gcshare.Name;
 
 @ManagedBean(name = "table")
 @SessionScoped

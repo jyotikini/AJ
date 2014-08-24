@@ -1,4 +1,4 @@
-package org.primefaces.showcase.view.file;
+package com.aj.gcshare;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,7 +24,7 @@ public class FileUploadView {
 	// Actions
 	// ------------------------------------------------------------------------------------
 
-	public void submit() {
+	public void save() {
 
 		// Just to demonstrate what information you can get from the uploaded
 		// file.

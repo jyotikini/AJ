@@ -1,4 +1,25 @@
 @CHARSET "ISO-8859-1";
+.button-placeholder
+{
+	list-style-type: none;
+	display: inline-block;
+}
+div #all-buttons-div
+{
+	padding: 1px 8px 1px 8px;
+}
+
+.all-buttons
+{
+	border: 1px solid #CC0000 !important;
+	background-color: #CC0000 !important; 
+	color: white !important;
+	text-align: center !important;
+	font-family: Arial !important;
+	font-size: 20px !important;
+	font-weight: bold !important;
+	border-radius: 3px;
+}
 
 .text-container-upper {
 	color:black;
@@ -53,12 +74,17 @@ body {
 	background-image: url('../default/images/WhizTechLogo.png');
 }
 
+.menu a
+{
+	color: white !important;
+	text-decoration: none;
+}
 .nav-menu-template .menu,.nav-menu {
 	color: white !important;
 }
 
 .menu-items-slider {
-	width: 98%;
+	width: 98%;	
 	min-width: 990px;
 }
 

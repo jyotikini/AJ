@@ -1,4 +1,4 @@
-package com.corejsf;
+package com.aj.gcshare;
 
 import java.io.Serializable;
 

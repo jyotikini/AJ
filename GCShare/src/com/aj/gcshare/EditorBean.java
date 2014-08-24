@@ -1,6 +1,6 @@
 	
 	
-	package com.dev;
+	package com.aj.gcshare;
 	 
 	import java.io.IOException;
 	import java.io.Serializable;
