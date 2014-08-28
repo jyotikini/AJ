@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:composite="http://java.sun.com/jsf/composite/primefaces-aristo"
+xmlns:p="http://primefaces.org/ui"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+<h:head>
+<title>login</title>
+<!-- <h:outputStylesheet library="default" name="css/style.css"></h:outputStylesheet> -->
+ <!-- <h:outputScript library="default"  name="script/GuyCarpenter.js"></h:outputScript> -->
+<!-- <script type="text/javascript" src="jquery-2.1.1.js"></script> -->
+<script type="text/javascript" src="GuyCarpenter.js"></script>
+<style>
+
+	.nav-menu{
+	color:white;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: sans-serif;
+	padding:2px 2px 2px 2px;
+	}
+	body{
+	background-color: #efefef;
+	margin:0px;
+	padding:0px;
+	}
+	div.menu-container li{
+	display:inline-table;
+	margin-left:40px;
+	}
+	div.menu-container{
+	width:100%;
+	height:inherit;
+	background-color: black;
+	text-decoration: none;
+	min-width: 1000px;
+	}
+	.nav-menu:hover{
+	background-color: white;
+	color:black;
+	}
+	#admin{
+	float:right;
+	margin-right: 20px;
+	}
+	
+        	.ui-dialog-content{
+        		background-color: #333333;
+        	}
+        	.ui-editor-group,.ui-editor-toolbar
+        	{
+        		background-image: none!important;
+        		//margin-left:100px;
+        	}
+        	.ui-dialog-titlebar{
+        		background-image: none!important;
+        		background-color: white;
+        	}
+        	.ui-dialog-titlebar:hover{
+        		
+        		background-color: #dedede!important;
+        		//border:1px solid black!important;
+        		
+        	}
+        	.ui-dialog{
+        		border: 1px solid #333333;
+        	}
+        	.ui-editor-button:HOVER 
+        	{
+				background-color: yellow!important;
+			}
+			
+	#header{
+	width: 100%;
+	min-width: 1000px;
+	height:100px;
+	background-color: white;
+	}
+</style>
+</h:head>
+
+<h:body>
+<div id = "header"></div>
+
+<h:form id = "login-form">
+	
+<div class="menu-container">	
+	<li>
+		 <h:outputLink styleClass="nav-menu" value="#" >
+		            	<h:outputText value="Home"/>
+		            </h:outputLink>
+	            
+	          
+	</li>
+	<li>
+		<h:outputLink styleClass="nav-menu" value="#" >
+		            	<h:outputText value="Lorem Ipsum"/>
+		            </h:outputLink>
+	</li>
+	<li id ="admin">
+		<h:outputLink styleClass="nav-menu" value="#" onclick="light.show()">
+		            	<h:outputText value="Admin"/>
+		            </h:outputLink>
+	</li>
+</div>	
+	
+		<div style="border:10px ridge #333333;box-shadow:5px 5px 5px #888888;position:absolute;background-color:white; border-radius:12px;margin-top:20px;width:300px;min-height: 100px;">
+			<div style="padding: 15px;">
+				<h:outputText value="#{editorBean.value}" escape="false"></h:outputText> 
+			</div>
+		</div>
+	
+            <p:dialog widgetVar="light" modal="true" resizable="false">
+	            
+						<table>
+							<tr>
+								<td>First Name:</td>
+								<td><input type ="text"/><!-- <p:inputText value = "#{user.name}"/> --></td>
+							</tr>
+							<tr>
+								<td>Last Name:</td>
+								<td><input type ="text"/><!-- <p:inputMask value = "#{user.address}"/> --></td>
+							</tr>
+							<!-- <tr>
+								<td><h:inputHidden value = "#{user.database}"/></td>
+							</tr> -->
+						</table>
+						<p:commandButton value="Login" action="editor.xhtml"></p:commandButton>
+								
+						
+					
+					
+            </p:dialog> 
+            
+            
+
+	
+	
+			
+	</h:form>
+
+		
+</h:body>
+</html>
