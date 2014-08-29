@@ -22,11 +22,11 @@ public class Name {
 	}
 	
 	public int getFilenum() {
-		System.out.println("filenumber:" +filenum);
+		//System.out.println("filenumber:" +filenum);
 		return filenum;
 	}
 	public void setFilenum(int filenum) {
-		System.out.println("filenumber:" +filenum);
+		//System.out.println("filenumber:" +filenum);
 		this.filenum = filenum;
 	}
 	public String getLast() {

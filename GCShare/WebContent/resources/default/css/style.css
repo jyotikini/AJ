@@ -1,18 +1,52 @@
 @CHARSET "ISO-8859-1";
-.button-placeholder
-{
+/*Events page*/
+.on-hover-div {
+	border: 1px solid #f00;
+	width: 200px;
+	height: 100px;
+	display: none;
+	position: absolute;
+	margin-top: -130px;
+	background-color: #f00;
+}
+
+.event-link:hover .on-hover-div,.event-link:hover .carrot {
+	display: block;
+	
+}
+
+.event-link {
+	margin: 300px auto;
+	position: absolute;
+	cursor: pointer;
+}
+.col{
+	border:1px solid black;
+}
+
+.carrot {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #f00;
+	margin-top: -35px;
+	display: none;
+}
+
+/*all buttons*/
+.button-placeholder {
 	list-style-type: none;
 	display: inline-block;
 }
-div #all-buttons-div
-{
+
+div #all-buttons-div {
 	padding: 1px 8px 1px 8px;
 }
 
-.all-buttons
-{
+.all-buttons {
 	border: 1px solid #CC0000 !important;
-	background-color: #CC0000 !important; 
+	background-color: #CC0000 !important;
 	color: white !important;
 	text-align: center !important;
 	font-family: Arial !important;
@@ -22,15 +56,15 @@ div #all-buttons-div
 }
 
 .text-container-upper {
-	color:black;
-	margin-top:12px;
-	margin-left:3%;
+	color: black;
+	margin-top: 12px;
+	margin-left: 3%;
 	text-align: center;
 	font-family: Arial;
 	font-size: 20px;
-	font-weight: bolder;	
-	position:absolute;
-	}
+	font-weight: bolder;
+	position: absolute;
+}
 
 .text-container {
 	border: 1px solid gray;
@@ -74,33 +108,38 @@ body {
 	background-image: url('../default/images/WhizTechLogo.png');
 }
 
-.menu a
-{
+.menu a {
 	color: white !important;
 	text-decoration: none;
 }
+
 .nav-menu-template .menu,.nav-menu {
 	color: white !important;
 }
 
 .menu-items-slider {
-	width: 98%;	
+	width: 98%;
 	min-width: 990px;
 }
 
-#menu-admin {
+#login-admin-guest {
 	float: right;
 	margin-top: -20px;
 	margin-right: 20px;
+	width: 200px;
+	margin-top: -30px;
 }
 
-#menu-admin:hover {
-	text-decoration: underline;
+.login-logout {
 	cursor: pointer;
+	color: white;
+	border: 1px solid black;
+	background-color: red;
+	float: right;
 }
 
-#menu-admin:active {
-	color: maroon;
+.welcome {
+	float: left;
 }
 
 #text1 {
@@ -284,24 +323,25 @@ table {
 #training-section-hori {
 	background-color: blue;
 }
-.reports-n-achievements-n-training-hori-sections
-{
+
+.reports-n-achievements-n-training-hori-sections {
 	box-sizing: border-box;
 	height: 425px;
 	float: left;
 	z-index: 0;
-	border:1px solid gray;
+	border: 1px solid gray;
 }
-#reports-n-achievements-n-training-hori-sections-left
-{
+
+#reports-n-achievements-n-training-hori-sections-left {
 	margin: 0.65% 0% 0% 1%;
-	width:30.5%;
+	width: 30.5%;
 }
-#reports-n-achievements-n-training-hori-sections-right
-{
-	margin:0.65% 0% 0% 1.7%;
-	width:65.5%;
+
+#reports-n-achievements-n-training-hori-sections-right {
+	margin: 0.65% 0% 0% 1.7%;
+	width: 65.5%;
 }
+
 #main-footer {
 	background-image: url('../default/images/Footer.png');
 	width: 100%;

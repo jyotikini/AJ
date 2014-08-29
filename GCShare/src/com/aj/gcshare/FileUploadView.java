@@ -51,7 +51,7 @@ public class FileUploadView {
 							prefix + "_",
 							"." + suffix,
 							new File(
-									"C:/Users/Kini-PC/git/AJ 1.1/AJ/GCShare/WebContent/resources/default/uploads"));
+									"C:/Users/Asad/git/GC29th/AJ/GCShare/WebContent/resources/default/uploads"));
 			output = new FileOutputStream(file);
 			IOUtils.copy(uploadedFile.getInputstream(), output);
 			fileName = file.getName();

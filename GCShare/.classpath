@@ -14,6 +14,6 @@
 			<attribute name="owner.project.facets" value="jst.jsf"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Tomcat Libraries"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat library"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

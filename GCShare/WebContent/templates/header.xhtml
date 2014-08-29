@@ -10,36 +10,51 @@
 		<div id="main-header">
 			<div id="image-container">
 			</div>
-			<div id="menu-admin" onclick="loginBox.show();">Login as Admin</div>
+			<div id="login-admin-guest">
+				<h:outputLabel styleClass="welcome"
+					value="Welcome, #{loginBean.getSessionUser()}"
+					rendered="#{loginBean.getSessionUser()=='Guest'}" />
+				<h:outputLabel styleClass="login-logout" onclick="loginBox.show();"
+					value="Login as Admin"
+					rendered="#{loginBean.getSessionUser()=='Guest'}" />
+				<h:outputLabel styleClass="welcome"
+					value="Welcome, #{loginBean.getSessionUser()}"
+					rendered="#{loginBean.getSessionUser()!='Guest'}" />
+				<h:form>
+					<h:commandLink styleClass="login-logout" value="Logout"
+						actionListener="#{loginBean.logout()}" action="#{loginBean.logout()}"
+						rendered="#{loginBean.getSessionUser()!='Guest'}" />
+				</h:form>
+			</div>
 		</div>
 		<div class="nav-menu-template" id="nav-menu-container"
 			style="background-image: url('../resources/default/images/TopMenu1.png')">
 			<div class="menu-items-slider" id="menu-items">
 				<li class="menu" id="menu-home">
 				 
-				<h:link outcome="home_admin" value="Home"/>
+				<h:link outcome="home" value="Home"/>
 				</li>
 				<li
-					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
+					style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
 				<li class="menu" id="menu-reports">
 				<h:link outcome="Reports" value="Reports"/>
 				
 				</li>
 				<li
-					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
+					style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
 				<li class="menu" id="menu-achievements">
 				<h:link outcome="Achievements" value="Achievements"/>
 				</li>
 				<li
-					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
+					style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
 				<li class="menu" id="menu-training">
 				<h:link outcome="Training" value="Training"/></li>
 				<li
-					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
+					style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
 				<li class="menu" id="menu-events">
 				<h:link outcome="Events" value="Events"/></li>
 				<li
-					Style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
+					style="border: 1px ridge gray; padding: 5px 0px 5px 0px; margin: 0px 12px 0px 12px; box-shadow: inset 10px 10px 2px 5px #bebebe"></li>
 				<li class="menu" id="menu-aboutus">
 				<h:link outcome="AboutUs" value="About Us"/></li>
 			</div>

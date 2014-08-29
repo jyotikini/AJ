@@ -56,7 +56,7 @@ public class TableData implements Serializable {
 
 		List<Name> list = new ArrayList<Name>();
 		File folder = new File(
-				"C:/Users/Kini-PC/git/AJ 1.1/AJ/GCShare/WebContent/resources/default/uploads");
+				"C:/Users/Asad/git/GC29th/AJ/GCShare/WebContent/resources/default/uploads");
 		listOfFiles = folder.listFiles();
 		
 		for (int i = 0; i < listOfFiles.length; i++) {

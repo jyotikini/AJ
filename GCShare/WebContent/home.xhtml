@@ -19,9 +19,10 @@
 						<tr>
 							<td id="carousel-section"></td>
 							<td id="overview-section">
-								<div
+								<h:outputLabel value="" 
 									class="reports-n-achievements-n-training-toggle-button-edit"
-									id="overview-section-button" onclick="dlg1.show()"></div>
+									id="overview-section-button" onclick="dlg1.show()"
+									rendered="#{loginBean.getSessionUser()!='Guest'}"/>
 								<div class="text-container">
 									<div style="padding: 15px;">
 										<h:outputText value="#{editorBean.overview}" escape="false"></h:outputText>
@@ -41,8 +42,10 @@
 						<div
 							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-minus"
 							id="reports-section-minus"></div>
-						<div class="reports-n-achievements-n-training-toggle-button-edit"
-							id="reports-section-button" onclick="dlg2.show()"></div>
+						<h:outputLabel value=""
+							class="reports-n-achievements-n-training-toggle-button-edit"
+							id="reports-section-button" onclick="dlg2.show()"
+							rendered="#{loginBean.getSessionUser()!='Guest'}" />
 
 						<div class="text-container-upper">REPORTS</div>
 
@@ -60,8 +63,10 @@
 						<div
 							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-minus"
 							id="achievements-section-minus"></div>
-						<div class="reports-n-achievements-n-training-toggle-button-edit"
-							id="achievements-section-button" onclick="dlg3.show()"></div>
+						<h:outputLabel value=""
+							class="reports-n-achievements-n-training-toggle-button-edit"
+							id="achievements-section-button" onclick="dlg3.show()"
+							rendered="#{loginBean.getSessionUser()!='Guest'}" />
 						<div class="text-container-upper">ACHIEVEMENTS</div>
 						<div class="text-container">
 							<div style="padding: 15px;">
@@ -78,8 +83,12 @@
 						<div
 							class="reports-n-achievements-n-training-toggle-button reports-n-achievements-n-training-toggle-button-minus"
 							id="training-section-minus"></div>
-						<div class="reports-n-achievements-n-training-toggle-button-edit"
-							id="training-section-button" onclick="dlg4.show()"></div>
+
+						<h:outputLabel onclick="dlg4.show()" value=""
+							styleClass="reports-n-achievements-n-training-toggle-button-edit"
+							id="training-section-button"
+							rendered="#{loginBean.getSessionUser()!='Guest'}">
+						</h:outputLabel>
 
 						<div class="text-container-upper">TRAINING</div>
 						<div class="text-container">
@@ -91,15 +100,13 @@
 					<div>
 						<div class="reports-n-achievements-n-training-individual-box-hori"
 							id="reports-section-hori">
-							<div
-								class="reports-n-achievements-n-training-hori-sections"
+							<div class="reports-n-achievements-n-training-hori-sections"
 								id="reports-n-achievements-n-training-hori-sections-left">
 								<div style="padding: 15px;">
 									<h:outputText value="#{editorBean.reports}" escape="false"></h:outputText>
 								</div>
 							</div>
-							<div
-								class="reports-n-achievements-n-training-hori-sections"
+							<div class="reports-n-achievements-n-training-hori-sections"
 								id="reports-n-achievements-n-training-hori-sections-right">
 								<h:form>
 									<h:dataTable value="#{table.filename}" var="name"
@@ -130,15 +137,13 @@
 						</div>
 						<div class="reports-n-achievements-n-training-individual-box-hori"
 							id="achievements-section-hori">
-							<div
-								class="reports-n-achievements-n-training-hori-sections"
+							<div class="reports-n-achievements-n-training-hori-sections"
 								id="reports-n-achievements-n-training-hori-sections-left">
 								<div style="padding: 15px;">
 									<h:outputText value="#{editorBean.achievements}" escape="false"></h:outputText>
 								</div>
 							</div>
-							<div
-								class="reports-n-achievements-n-training-hori-sections"
+							<div class="reports-n-achievements-n-training-hori-sections"
 								id="reports-n-achievements-n-training-hori-sections-right">
 								<h:form>
 									<h:dataTable value="#{table.filename}" var="name"
@@ -171,15 +176,13 @@
 						</div>
 						<div class="reports-n-achievements-n-training-individual-box-hori"
 							id="training-section-hori">
-							<div
-								class="reports-n-achievements-n-training-hori-sections"
+							<div class="reports-n-achievements-n-training-hori-sections"
 								id="reports-n-achievements-n-training-hori-sections-left">
 								<div style="padding: 15px;">
 									<h:outputText value="#{editorBean.training}" escape="false"></h:outputText>
 								</div>
 							</div>
-							<div
-								class="reports-n-achievements-n-training-hori-sections"
+							<div class="reports-n-achievements-n-training-hori-sections"
 								id="reports-n-achievements-n-training-hori-sections-right">
 								<h:form>
 									<h:dataTable value="#{table.filename}" var="name"
@@ -278,7 +281,25 @@
 					</h:form>
 				</div>
 			</p:dialog>
-
+			<p:dialog widgetVar="loginBox" modal="true" resizable="false">
+				<h:form id="loginForm">
+					<p:growl id="msg" showDetail="true" life="3000" />
+					<p:panel header="Login" style="width: 360px;">
+						<h:panelGrid id="loginPanel" columns="2">
+							<h:outputText value="Username" />
+							<p:inputText id="username" value="#{loginBean.uname}"></p:inputText>
+							<p:spacer></p:spacer>
+							<h:outputText value="Password" />
+							<p:password id="password" value="#{loginBean.password}"
+								feedback="false"></p:password>
+							<p:spacer></p:spacer>
+							<p:spacer></p:spacer>
+							<p:commandButton action="#{loginBean.loginProject}" value="Login"
+								update="loginForm" ajax="true"></p:commandButton>
+						</h:panelGrid>
+					</p:panel>
+				</h:form>
+			</p:dialog>
 
 			<!-- <div style="text-align: center;">
 				<h:form>

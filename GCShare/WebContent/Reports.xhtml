@@ -28,7 +28,7 @@
 				</p:column>
 			</p:dataTable>
 		</h:form>
-		<h:form>
+		<h:form rendered="#{loginBean.getSessionUser()!='Guest'}">
 			<li class="button-placeholder">
 				<div class="all-buttons" id="all-buttons-div" onclick="dlg2.show();">Upload</div>
 			</li>
